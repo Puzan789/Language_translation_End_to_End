@@ -6,6 +6,7 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from typing import Any
 from translator.logging import logger
+import torch
 
 
 @ensure_annotations
@@ -59,3 +60,7 @@ def get_size(path:Path)-> str:
     """
     size_in_kb=round(os.path.getsize(path)/1024)
     return f"{size_in_kb} KB"
+
+def casual_mask(self,size):
+        mask=torch.triu(torch.ones(1,size,size),diagonal=1).type(torch.int)
+        return mask==0

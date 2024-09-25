@@ -1,4 +1,11 @@
 **/__pycache__/
 /venv/
 artifacts/
-/logs/
+
+# Ignore logs directories in any location
+logs/
+/logs/*
+**/logs/
+/**/logs/*
+
+*egg-info/

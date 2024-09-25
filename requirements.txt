@@ -3,3 +3,4 @@ PyYAML
 python-box
 ensure
 -e .
+tensorboard

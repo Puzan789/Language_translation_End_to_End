@@ -9,6 +9,7 @@ from typing import Any
 from translator.logging import logger
 from translator.entity import DataTransformConfig
 from pathlib import Path
+from translator.utils.common import casual_mask
 
 class DataTransformation:
     def __init__(self,config:DataTransformConfig):
@@ -50,9 +51,7 @@ class BilingualDataset(Dataset):
         self.pad_token=torch.tensor([tokenizer_tgt.token_to_id('[PAD]')], dtype=torch.int64)
     def __len__(self):
         return len(self.ds)
-    def casual_mask(self,size):
-        mask=torch.triu(torch.ones(1,size,size),diagonal=1).type(torch.int)
-        return mask==0
+    
     
     def __getitem__(self,index:Any):
         src_target_pair=self.ds[index]
@@ -107,7 +106,7 @@ class BilingualDataset(Dataset):
             'encoder_input':encoder_input,
             'decoder_input':decoder_input,
             'encoder_mask': (encoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int(),
-            'decoder_mask': (decoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int() & self.casual_mask(decoder_input.size(0)),
+            'decoder_mask': (decoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int() & casual_mask(decoder_input.size(0)),
             'label':label,
             'src_text': src_text,
             'tgt_text': tgt_text
