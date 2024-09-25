@@ -639,3 +639,566 @@ Source-Age: 40
 [2024-09-25 22:14:38,300:INFO:datatransform:The  max length of source sentence is 14
 [2024-09-25 22:14:38,301:INFO:datatransform:The  max length of target sentence is 11
 [2024-09-25 22:14:38,301:INFO:main:<><><> stage DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 00:57:13,350:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 00:57:13,902:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 00:57:13,909:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 00:57:13,911:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 00:57:13,912:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 00:57:13,912:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 00:57:15,010:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: C735:B5E5C:7D868F:9B7C70:66F4608E
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 19:12:15 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21739-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727291535.628351,VS0,VE375
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0f2d5ac3edd76aa576c20c9041b14f56089c34a6
+Expires: Wed, 25 Sep 2024 19:17:15 GMT
+Source-Age: 0
+
+
+[2024-09-26 00:57:15,011:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 00:57:15,015:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 00:57:15,015:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 00:57:15,015:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 00:57:15,020:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 00:57:15,023:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 00:57:15,024:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 00:57:15,025:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 00:57:15,026:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 00:57:15,027:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 00:57:15,032:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 00:57:15,034:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 00:57:15,035:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 00:57:15,035:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 00:57:15,044:INFO:datatransform:Tokenizer saved
+[2024-09-26 00:57:15,049:INFO:datatransform:Tokenizer saved
+[2024-09-26 00:57:15,057:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 00:57:15,058:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 00:57:15,058:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 00:57:49,493:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 00:57:50,708:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 00:57:50,712:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 00:57:50,714:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 00:57:50,716:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 00:57:50,717:INFO:3805392457:Using devicecuda
+[2024-09-26 00:57:50,722:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 00:57:50,725:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 00:57:50,728:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 00:57:50,729:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 00:57:50,733:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 00:57:50,735:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 00:57:50,749:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 00:57:50,750:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:01:51,980:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:01:51,984:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:01:51,986:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:01:51,987:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:01:51,988:INFO:1569167207:Using devicecuda
+[2024-09-26 01:01:51,995:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:01:52,002:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:01:52,010:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:01:52,016:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:01:52,019:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:01:52,022:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:01:52,028:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:01:52,029:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:02:05,191:INFO:1569167207:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:02:05,193:INFO:1569167207:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:04:02,535:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:04:02,538:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:04:02,540:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:04:02,541:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:04:02,543:INFO:1569167207:Using devicecuda
+[2024-09-26 01:04:02,550:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:04:02,553:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:04:02,555:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:04:02,557:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:04:02,561:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:04:02,564:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:04:02,577:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:04:02,584:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:04:15,902:INFO:1569167207:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:04:15,903:INFO:1569167207:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:07:06,037:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:07:06,041:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:07:06,043:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:07:06,045:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:07:06,046:INFO:1569167207:Using devicecuda
+[2024-09-26 01:07:06,050:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:07:06,052:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:07:06,053:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:07:06,055:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:07:06,059:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:07:06,061:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:07:06,067:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:07:06,070:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:07:19,573:INFO:1569167207:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:07:19,575:INFO:1569167207:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:20:25,161:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:20:25,165:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:20:25,168:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:20:25,170:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:20:25,171:INFO:1361938318:Using devicecuda
+[2024-09-26 01:20:25,174:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:20:25,177:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:20:25,179:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:20:25,180:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:20:25,182:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:20:25,184:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:20:25,190:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:20:25,191:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:20:38,271:INFO:1361938318:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:20:38,273:INFO:1361938318:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:22:39,086:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:22:39,089:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:22:39,091:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:22:39,093:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:22:39,094:INFO:1361938318:Using devicecuda
+[2024-09-26 01:22:39,099:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:22:39,101:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:22:39,103:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:22:39,104:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:22:39,107:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:22:39,109:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:22:39,117:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:22:39,118:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:22:52,467:INFO:1361938318:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:22:52,469:INFO:1361938318:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:22:52,798:INFO:1361938318:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 01:48:30,817:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:49:06,208:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:50:51,386:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:50:52,120:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 01:50:52,122:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:50:52,124:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:50:52,124:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:50:52,124:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 01:50:53,125:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: C735:B5E5C:7D868F:9B7C70:66F4608E
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 20:05:53 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21751-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1727294753.745262,VS0,VE302
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b1443095b7c9da9150b84355472b1e0c33baad29
+Expires: Wed, 25 Sep 2024 20:10:53 GMT
+Source-Age: 0
+
+
+[2024-09-26 01:50:53,126:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 01:50:53,131:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 01:50:53,131:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 01:50:53,131:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 01:50:53,135:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:50:53,137:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:50:53,137:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:50:53,137:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 01:50:53,138:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 01:50:53,138:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 01:50:53,140:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:50:53,141:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:50:53,141:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:50:53,141:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:50:53,163:INFO:datatransform:Tokenizer saved
+[2024-09-26 01:50:53,173:INFO:datatransform:Tokenizer saved
+[2024-09-26 01:50:53,183:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:50:53,183:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:50:53,184:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 01:50:53,184:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 01:50:53,186:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:50:53,188:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:50:53,188:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:50:53,188:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:50:53,210:INFO:modeltrain:Using devicecuda
+[2024-09-26 01:50:53,213:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:50:53,214:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:50:53,215:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:50:53,215:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:50:53,217:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:50:53,219:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:50:53,223:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:50:53,223:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:50:55,467:ERROR:main:name 'nn' is not defined
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 42, in <module>
+    model_training.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 16, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 14, in main
+    model_trainer.trainmodel()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltrain.py", line 60, in trainmodel
+    loss_fn = nn.CrossEntropyLoss(ignore_index=tokenizer_src.token_to_id('[PAD]'), label_smoothing=0.1).to(device)
+              ^^
+NameError: name 'nn' is not defined
+[2024-09-26 01:51:23,792:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:51:24,612:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 01:51:24,615:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:24,616:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:24,616:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:24,616:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 01:51:24,616:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 01:51:24,617:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 01:51:24,618:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 01:51:24,619:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 01:51:24,619:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 01:51:24,620:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:24,621:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:24,621:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:24,622:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 01:51:24,622:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 01:51:24,623:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 01:51:24,625:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:24,625:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:24,626:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:24,626:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:51:24,627:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:24,628:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:24,635:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:51:24,636:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:51:24,636:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 01:51:24,636:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 01:51:24,638:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:24,639:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:24,639:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:24,639:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:51:24,649:INFO:modeltrain:Using devicecuda
+[2024-09-26 01:51:24,651:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:24,652:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:24,652:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:24,652:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:51:24,653:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:24,654:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:24,657:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:51:24,657:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:51:26,992:ERROR:main:CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 42, in <module>
+    model_training.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 16, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 14, in main
+    model_trainer.trainmodel()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltrain.py", line 75, in trainmodel
+    encoder_output = model.encode(encoder_input, encoder_mask)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 192, in encode
+    return self.encoder(source,src_mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 136, in forward
+    x=layer(x, mask)
+      ^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in forward
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 110, in forward
+    return x+self.dropout(sublayer(self.norm(x)))
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in <lambda>
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 95, in forward
+    x,self.attention_scores=MultiHeadAttention.attention(query,key,value,mask,self.dropout)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 85, in attention
+    return (attention_scores@value) ,attention_scores
+            ~~~~~~~~~~~~~~~~^~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2024-09-26 01:51:45,419:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:45,448:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:45,449:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:45,453:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:51:45,455:INFO:1361938318:Using devicecuda
+[2024-09-26 01:51:45,464:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:45,470:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:45,471:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:45,472:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:51:55,201:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:51:55,876:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 01:51:55,879:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:55,880:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:55,881:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:55,881:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 01:51:56,252:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: C735:B5E5C:7D868F:9B7C70:66F4608E
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 20:06:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21723-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1727294816.219936,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b9822a05694e126e976c1e8bde743138a2c8a473
+Expires: Wed, 25 Sep 2024 20:11:56 GMT
+Source-Age: 63
+
+
+[2024-09-26 01:51:56,253:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 01:51:56,257:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 01:51:56,257:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 01:51:56,257:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 01:51:56,263:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:56,265:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:56,266:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:56,266:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 01:51:56,267:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 01:51:56,267:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 01:51:56,271:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:56,273:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:56,274:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:56,274:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:51:56,283:INFO:datatransform:Tokenizer saved
+[2024-09-26 01:51:56,287:INFO:datatransform:Tokenizer saved
+[2024-09-26 01:51:56,291:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:51:56,292:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:51:56,292:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 01:51:56,292:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 01:51:56,295:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:56,296:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:56,296:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:56,297:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:51:56,306:INFO:modeltrain:Using devicecuda
+[2024-09-26 01:51:56,308:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:51:56,309:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:51:56,309:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:51:56,309:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:51:56,311:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:56,312:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:51:56,315:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:51:56,315:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:51:58,527:ERROR:main:CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 42, in <module>
+    model_training.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 16, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 14, in main
+    model_trainer.trainmodel()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltrain.py", line 75, in trainmodel
+    encoder_output = model.encode(encoder_input, encoder_mask)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 192, in encode
+    return self.encoder(source,src_mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 136, in forward
+    x=layer(x, mask)
+      ^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in forward
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 110, in forward
+    return x+self.dropout(sublayer(self.norm(x)))
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in <lambda>
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 95, in forward
+    x,self.attention_scores=MultiHeadAttention.attention(query,key,value,mask,self.dropout)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 85, in attention
+    return (attention_scores@value) ,attention_scores
+            ~~~~~~~~~~~~~~~~^~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2024-09-26 01:52:04,820:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:04,824:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:04,826:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:04,828:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:52:04,829:INFO:1361938318:Using devicecuda
+[2024-09-26 01:52:04,833:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:04,836:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:04,837:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:04,840:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:52:04,845:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:04,847:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:04,855:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:52:04,856:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:52:16,108:INFO:1361938318:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 01:52:16,110:INFO:1361938318:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 01:52:16,317:INFO:1361938318:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 01:52:23,845:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 01:52:24,486:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 01:52:24,493:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:24,497:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:24,497:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:24,498:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 01:52:24,498:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 01:52:24,498:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 01:52:24,500:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 01:52:24,500:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 01:52:24,500:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 01:52:24,502:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:24,503:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:24,504:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:24,504:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 01:52:24,505:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 01:52:24,505:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 01:52:24,507:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:24,510:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:24,511:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:24,511:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:52:24,513:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:24,514:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:24,521:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:52:24,522:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:52:24,523:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 01:52:24,524:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 01:52:24,526:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:24,528:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:24,529:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:24,529:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 01:52:24,538:INFO:modeltrain:Using devicecuda
+[2024-09-26 01:52:24,541:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 01:52:24,544:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 01:52:24,544:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 01:52:24,545:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 01:52:24,547:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:24,548:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 01:52:24,551:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 01:52:24,552:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 01:52:26,829:ERROR:main:CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 42, in <module>
+    model_training.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 16, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_04_datatraining.py", line 14, in main
+    model_trainer.trainmodel()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltrain.py", line 75, in trainmodel
+    encoder_output = model.encode(encoder_input, encoder_mask)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 192, in encode
+    return self.encoder(source,src_mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 136, in forward
+    x=layer(x, mask)
+      ^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in forward
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 110, in forward
+    return x+self.dropout(sublayer(self.norm(x)))
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 120, in <lambda>
+    x=self.residual_connections[0](x,lambda x : self.self_attention_block(x,x,x,src_mask))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 95, in forward
+    x,self.attention_scores=MultiHeadAttention.attention(query,key,value,mask,self.dropout)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/model/__init__.py", line 85, in attention
+    return (attention_scores@value) ,attention_scores
+            ~~~~~~~~~~~~~~~~^~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

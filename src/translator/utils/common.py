@@ -61,6 +61,7 @@ def get_size(path:Path)-> str:
     size_in_kb=round(os.path.getsize(path)/1024)
     return f"{size_in_kb} KB"
 
-def casual_mask(self,size):
+def causal_mask(size):
         mask=torch.triu(torch.ones(1,size,size),diagonal=1).type(torch.int)
         return mask==0
+

@@ -9,7 +9,7 @@ from typing import Any
 from translator.logging import logger
 from translator.entity import DataTransformConfig
 from pathlib import Path
-from translator.utils.common import casual_mask
+from translator.utils.common import causal_mask
 
 class DataTransformation:
     def __init__(self,config:DataTransformConfig):
@@ -106,7 +106,7 @@ class BilingualDataset(Dataset):
             'encoder_input':encoder_input,
             'decoder_input':decoder_input,
             'encoder_mask': (encoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int(),
-            'decoder_mask': (decoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int() & casual_mask(decoder_input.size(0)),
+            'decoder_mask': (decoder_input!=self.pad_token).unsqueeze(0).unsqueeze(0).int() & causal_mask(size=decoder_input.size(0)),
             'label':label,
             'src_text': src_text,
             'tgt_text': tgt_text

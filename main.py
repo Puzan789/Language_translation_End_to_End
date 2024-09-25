@@ -2,6 +2,7 @@ from translator.pipeline.stage_01_dataingestion import DataIngestionTrainingPipe
 from translator.logging import logger
 from translator.pipeline.stage_02_datavalidation import DataValidationTrainingPipeline
 from translator.pipeline.stage_03_datatransformation import DataTransformationPipeline
+from translator.pipeline.stage_04_datatraining import ModelTrainingPipeline
 
 STAGE_NAME="DATA INGESTION STAGE"
 try:
@@ -29,6 +30,16 @@ try:
     logger.info (f"<><><><>{STAGE_NAME} Started <><><><>")
     data_transformation =DataTransformationPipeline()
     data_transformation.main()
+    logger.info(f"<><><>  {STAGE_NAME} completed successfully <><><>")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+STAGE_NAME="MODEL TRAINING STAGE"
+try:
+    logger.info (f"<><><><>{STAGE_NAME} Started <><><><>")
+    model_training=ModelTrainingPipeline()
+    model_training.main()
     logger.info(f"<><><>  {STAGE_NAME} completed successfully <><><>")
 except Exception as e:
     logger.exception(e)

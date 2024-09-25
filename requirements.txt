@@ -4,3 +4,4 @@ python-box
 ensure
 -e .
 tensorboard
+nltk

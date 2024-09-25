@@ -27,3 +27,18 @@ class DataTransformConfig:
     src_file:Path
     tgt_file:Path
     batch_size:int
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir:Path
+    model_path:Path
+    experiment_path:Path
+    max_seq_len:int
+    d_model:int
+    lr:float
+    model_basename:str
+    num_epochs:int
+    preload:bool | str
+
+
+

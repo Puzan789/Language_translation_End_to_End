@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from translator.entity import DataIngestionConfig,DataValidationConfig,DataTransformConfig
+from translator.entity import DataIngestionConfig,DataValidationConfig,DataTransformConfig,ModelTrainingConfig
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from translator.utils.common import read_yaml,create_directories,get_size
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
@@ -50,3 +50,22 @@ class ConfigurationManager:
             batch_size=params.batch_size
         )
         return data_transformation_config
+    def get_model_training_config(self)-> ModelTrainingConfig:
+        config=self.config.data_training
+        params=self.params.modeltrainer
+        print(len(params))
+        print("running")
+        create_directories([config.root_dir])
+        model_training_config=ModelTrainingConfig(
+            root_dir=config.root_dir,
+            model_path=config.model_path,
+            experiment_path=config.experiment_path,
+            max_seq_len=params.max_seq_len,
+            d_model=params.d_model,
+            lr=params.learning_rate,
+            preload=config.preload,
+            model_basename=config.model_basename,
+            num_epochs=params.num_epochs
+
+        )
+        return model_training_config
