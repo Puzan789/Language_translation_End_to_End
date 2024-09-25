@@ -1,0 +1,260 @@
+[2024-09-25 08:16:13,594:ERROR:2198497496:An error occured while piepeline
+[2024-09-25 08:16:55,265:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:16:55,270:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:16:55,272:ERROR:2198497496:An error occured while piepeline
+[2024-09-25 08:21:04,789:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:21:04,793:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:21:44,286:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:21:44,290:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:21:44,296:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:21:44,300:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:21:44,302:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:24:13,669:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:24:13,676:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:24:13,679:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:24:13,680:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:24:13,682:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:27:46,809:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:27:46,814:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:27:46,816:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:27:46,818:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:27:46,819:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:33:19,095:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:33:19,100:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:33:19,102:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:33:19,104:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:33:19,105:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:34:22,821:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:34:22,826:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:34:22,828:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:34:22,830:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:34:22,831:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:36:03,048:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:36:03,053:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:36:03,057:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:36:03,060:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:36:03,062:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:37:56,233:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:37:56,237:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:37:56,241:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:37:56,244:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:37:56,246:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:39:45,700:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:39:45,706:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:39:45,709:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:39:45,711:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:39:45,712:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:41:07,306:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:41:07,310:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:41:07,312:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:41:07,313:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:41:10,668:INFO:2124288436:artifacts/data_ingestion/data.zip downloaded with the following Server: GitHub.com
+Date: Wed, 25 Sep 2024 02:56:07 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"90a05551ea3d8984f33e1f8bc14e40f4"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=lpiCtAIW1YQRaseOh6ek0wZudKb6AG4chC1LBbxf7feyzaY%2FgemN9JXDBNAzU%2BEWbJnF1L13l7NdEYrySMdlqxEEgMcu%2FIY2YrRUK3wYqCWKuZ3yuqPVNbGfX3LljsAZjxY0SfQr%2B8nd4Vx7XtkIYeIDaL0YZy%2BUmSdpc2HSmbnpMWxVgChEWwSRIvs%2FAZgGE98RkEy5VEe6apxscz%2FqpaE7JvsLKEgjMgq261bKMHXeahFfirP%2Bt2s%2B3gVvnJ5jhoSS%2BIv8F28Gxj3BJg9quw%3D%3D--uX4WaMtewkgX0%2FnW--qpbbIa0X67OS4vU1F3p4%2Fg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.828811460.1727232967; Path=/; Domain=github.com; Expires=Thu, 25 Sep 2025 02:56:07 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Thu, 25 Sep 2025 02:56:07 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: E726:177626:4A0374:5225DD:66F37BC7
+connection: close
+
+
+[2024-09-25 08:41:10,670:INFO:2124288436:Extracting zip file to artifacts/data_ingestion
+[2024-09-25 08:41:10,671:ERROR:2124288436:Bad zip file artifacts/data_ingestion/data.zip
+[2024-09-25 08:47:26,844:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:47:26,848:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:47:26,851:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:47:26,853:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:47:26,854:ERROR:3390118195:An error occured while creating pipeline
+[2024-09-25 08:48:12,848:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:48:12,852:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:48:12,856:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:48:12,858:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:48:12,859:ERROR:4211454742:An error occured while creating pipeline
+[2024-09-25 08:49:08,809:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:49:08,813:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:49:08,816:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:49:08,819:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:49:08,821:ERROR:147248222:An error occured while creating pipeline
+[2024-09-25 08:49:43,814:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:49:43,818:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:49:43,821:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:49:43,824:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:49:43,825:ERROR:2293740858:An error occured while
+[2024-09-25 08:49:59,545:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:49:59,548:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:49:59,550:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:49:59,552:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:50:01,469:INFO:2124288436:artifacts/data_ingestion/translatordata.zip downloaded with the following Server: GitHub.com
+Date: Wed, 25 Sep 2024 03:05:00 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"9b8730f4f59e55f112db6c5e1bce058f"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=LpAP%2BBZfe9v81MFnaBtnt%2FIkA0VzEhi%2BwnPbPgCFBOCGcuCO3fMm%2B7JZP0s7FaLMNYWN6RVflwIC9ShyR4X4nyrYHdLeD4%2Bz5EomwrMowHymUHRnYroa4GoEGbGmL3qeErCZrylMNv%2BmZ7z%2B%2F%2B9Seu2H1U5bWnktcKFFhQFt5MPkFdqXTIPYM5KGigpVvq6BuyTAyH6lTl8%2FgM49LFNLEq8pRAizATkpBvFrHVz599fE5qlNp1n6Aq2JzHjhFSR0XO0JHirmcbtxHY2xuH3Xrg%3D%3D--i18a6ammpF%2FSUucf--5JIEsucJrdNP0ij7uu8NQA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.824977054.1727233499; Path=/; Domain=github.com; Expires=Thu, 25 Sep 2025 03:04:59 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Thu, 25 Sep 2025 03:04:59 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: DEA0:32BCD0:4B92E4:53D513:66F37DDB
+connection: close
+
+
+[2024-09-25 08:50:01,472:INFO:2124288436:Extracting zip file to artifacts/data_ingestion
+[2024-09-25 08:50:01,474:ERROR:2124288436:Bad zip file artifacts/data_ingestion/translatordata.zip
+[2024-09-25 08:52:10,444:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:52:10,446:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:52:10,449:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:52:10,450:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:52:11,054:ERROR:2293740858:An error occured while
+[2024-09-25 08:53:38,013:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:53:38,018:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:53:38,020:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:53:38,022:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:54:07,276:INFO:2124288436:artifacts/data_ingestion/translatordata.zip downloaded with the following Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1552:132923:588B66:6F0EAD:66F37EBB
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 03:08:45 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21727-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727233724.027460,VS0,VE1598
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 067b8dc093cd8c2c964ef23ce0e01d41a9128d11
+Expires: Wed, 25 Sep 2024 03:13:45 GMT
+Source-Age: 1
+
+
+[2024-09-25 08:54:07,278:INFO:2124288436:Extracting zip file to artifacts/data_ingestion
+[2024-09-25 08:54:07,850:INFO:2124288436:Extraction completed successfully
+[2024-09-25 08:58:50,688:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:58:50,694:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:58:50,697:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:58:50,699:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:58:50,700:ERROR:2293740858:An error occured while
+[2024-09-25 08:58:55,634:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 08:58:55,639:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 08:58:55,641:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 08:58:55,642:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 08:58:56,784:INFO:2124288436:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6C9E:175DB:369A39:44304A:66F37FF3
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 03:13:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21733-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727234036.431574,VS0,VE296
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 40b7ba4c175c7f5d20c7b1c6cc6d87811a2ce526
+Expires: Wed, 25 Sep 2024 03:18:56 GMT
+Source-Age: 0
+
+
+[2024-09-25 08:58:56,785:INFO:2124288436:Extracting zip file to artifacts/data_ingestion
+[2024-09-25 08:58:56,788:INFO:2124288436:Extraction completed successfully
+[2024-09-25 11:48:31,109:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 11:48:31,110:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 11:48:31,112:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 11:48:31,113:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 11:48:31,113:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 11:48:31,113:ERROR:stage_01_dataingestion:An error occured while
+[2024-09-25 11:48:31,113:ERROR:main:cannot access local variable 'Dataingestion' where it is not associated with a value
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 19, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 14, in main
+    Dataingestion=Dataingestion(data_ingestion_config)
+                  ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Dataingestion' where it is not associated with a value
+[2024-09-25 11:49:36,238:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 11:49:36,240:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 11:49:36,241:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 11:49:36,241:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 11:49:36,241:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 11:49:36,241:ERROR:stage_01_dataingestion:An error occured while
+[2024-09-25 11:49:36,241:ERROR:main:cannot access local variable 'Dataingestion' where it is not associated with a value
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 19, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 14, in main
+    Dataingestion=Dataingestion(data_ingestion_config)
+                  ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Dataingestion' where it is not associated with a value
+[2024-09-25 11:50:25,312:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 11:50:25,314:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 11:50:25,315:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 11:50:25,315:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 11:50:25,315:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 11:50:26,318:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2941:32AA24:5443E0:69CDC5:66F3A825
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 06:05:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21721-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727244326.987513,VS0,VE307
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c6f3e16d310411a08fc635007886e2e5a7d78bb9
+Expires: Wed, 25 Sep 2024 06:10:26 GMT
+Source-Age: 0
+
+
+[2024-09-25 11:50:26,319:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion
+[2024-09-25 11:50:26,323:INFO:dataingestion:Extraction completed successfully
+[2024-09-25 11:50:26,323:INFO:main:<><><> stage DATA INGESTION STAGE completed successfully <><><>
