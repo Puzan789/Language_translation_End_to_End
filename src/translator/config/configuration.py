@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from translator.entity import DataIngestionConfig
+from translator.entity import DataIngestionConfig,DataValidationConfig
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from translator.utils.common import read_yaml,create_directories,get_size
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
@@ -23,3 +23,12 @@ class ConfigurationManager:
             unzip_dir=Path(config.unzip_dir),  # Convert to Path object
         )
         return data_ingestion_config
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+        create_directories([Path(config.root_dir)])  # Ensure it's a Path object
+        data_validation_config = DataValidationConfig(
+            root_dir=Path(config.root_dir),  # Convert to Path object
+            STATUS_FILE=config.STATUS_FILE,
+            ALL_REQUIRED_FILES=config.ALL_REQUIRED_FILES
+        )
+        return data_validation_config
