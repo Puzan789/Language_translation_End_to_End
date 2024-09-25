@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from translator.entity import DataIngestionConfig,DataValidationConfig
+from translator.entity import DataIngestionConfig,DataValidationConfig,DataTransformConfig
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from translator.utils.common import read_yaml,create_directories,get_size
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
@@ -32,3 +32,21 @@ class ConfigurationManager:
             ALL_REQUIRED_FILES=config.ALL_REQUIRED_FILES
         )
         return data_validation_config
+    def get_data_transformation_config(self)-> DataTransformConfig:
+        config=self.config.data_transformation
+        params=self.params.modeltrainer
+        print(len(params))
+        print("running")
+        create_directories([config.root_dir])
+        data_transformation_config=DataTransformConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            tokenizer_file=config.tokenizer_file,
+            max_seq_len=params.max_seq_len,
+            src_lang=params.src_lang,
+            tgt_lang=params.tgt_lang,
+            src_file=config.src_file,
+            tgt_file=config.tgt_file,
+            batch_size=params.batch_size
+        )
+        return data_transformation_config

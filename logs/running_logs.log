@@ -302,3 +302,340 @@ Source-Age: 0
 [2024-09-25 13:55:02,453:INFO:common:Directory 'artifacts' created successfully
 [2024-09-25 13:55:02,454:INFO:common:Directory 'artifacts/data_validation' created successfully
 [2024-09-25 13:55:02,456:INFO:main:<><><> stage DATA vALIDATION STAGE completed successfully <><><>
+[2024-09-25 14:47:55,002:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 14:47:55,004:ERROR:stage_01_dataingestion:An error occured while
+[2024-09-25 14:47:55,004:ERROR:main:mapping values are not allowed here
+  in "config/config.yaml", line 16, column 12
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 19, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_01_dataingestion.py", line 12, in main
+    config=ConfigurationManager()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/config/configuration.py", line 12, in __init__
+    self.config=read_yaml(config_file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/ensure/main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/utils/common.py", line 33, in read_yaml
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/utils/common.py", line 27, in read_yaml
+    content=yaml.safe_load(yaml_file)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/yaml/scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "config/config.yaml", line 16, column 12
+[2024-09-25 14:48:07,515:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 14:48:07,517:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 14:48:07,518:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 14:48:07,519:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 14:48:07,519:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 14:48:15,917:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 273D:32AA24:57458B:6D2FA7:66F3C558
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 09:03:15 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21745-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1727254995.333603,VS0,VE317
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: a64948fe373b4a5923939f6e61375122666bc50f
+Expires: Wed, 25 Sep 2024 09:08:15 GMT
+Source-Age: 0
+
+
+[2024-09-25 14:48:15,917:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-25 14:48:15,922:INFO:dataingestion:Extraction completed successfully
+[2024-09-25 14:48:15,922:INFO:main:<><><> stage DATA INGESTION STAGE completed successfully <><><>
+[2024-09-25 14:48:15,922:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-25 14:48:15,926:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 14:48:15,928:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 14:48:15,929:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 14:48:15,930:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-25 14:48:15,931:INFO:main:<><><> stage DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-25 14:50:07,367:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 14:50:07,369:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 14:50:07,370:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 14:50:07,370:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 14:50:07,370:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 14:50:07,744:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 273D:32AA24:57458B:6D2FA7:66F3C558
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 09:05:08 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21730-DEL
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1727255108.175887,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0fa389c07f570ee990fd7ebbc336f8b0c0d34aaf
+Expires: Wed, 25 Sep 2024 09:10:08 GMT
+Source-Age: 113
+
+
+[2024-09-25 14:50:07,745:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-25 14:50:07,749:INFO:dataingestion:Extraction completed successfully
+[2024-09-25 14:50:07,749:INFO:main:<><><> stage DATA INGESTION STAGE completed successfully <><><>
+[2024-09-25 14:50:07,749:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-25 14:50:07,753:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 14:50:07,756:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 14:50:07,757:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 14:50:07,757:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-25 14:50:07,759:INFO:main:<><><> stage DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-25 14:58:26,698:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-25 21:21:38,514:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:21:38,536:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:25:47,649:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:25:47,654:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:25:47,657:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:25:47,659:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:28:27,488:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:28:27,492:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:28:27,493:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:28:27,495:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:32:48,122:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:32:48,127:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:32:48,129:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:32:48,132:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:36:17,458:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:36:17,463:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:36:17,465:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:36:17,467:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:36:46,716:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:36:46,720:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:36:46,722:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:36:46,724:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:38:25,123:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:38:25,126:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:38:25,128:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:38:25,130:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:38:25,169:INFO:3460548493:Tokenizer saved
+[2024-09-25 21:38:25,180:INFO:3460548493:Tokenizer saved
+[2024-09-25 21:40:46,853:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:40:46,858:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:40:46,860:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:40:46,862:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:40:46,876:INFO:3460548493:Tokenizer retrieved from file
+[2024-09-25 21:40:46,883:INFO:3460548493:Tokenizer retrieved from file
+[2024-09-25 21:41:31,683:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:41:31,687:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:41:31,689:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:41:31,691:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:41:31,695:INFO:3460548493:Tokenizer retrieved from file
+[2024-09-25 21:41:31,697:INFO:3460548493:Tokenizer retrieved from file
+[2024-09-25 21:41:42,016:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:41:42,019:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:41:42,022:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:41:42,023:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:41:42,029:INFO:2164898647:Tokenizer retrieved from file
+[2024-09-25 21:41:42,038:INFO:2164898647:Tokenizer retrieved from file
+[2024-09-25 21:45:49,538:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:45:49,542:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:45:49,544:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:45:49,546:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:45:49,550:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:45:49,552:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:49:27,105:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:49:27,109:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:49:27,111:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:49:27,113:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:49:27,120:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:49:27,125:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:50:40,619:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:50:40,624:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:50:40,627:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:50:40,630:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:50:40,634:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:50:40,637:INFO:2941165068:Tokenizer retrieved from file
+[2024-09-25 21:52:07,331:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:52:07,335:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:52:07,337:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:52:07,338:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:52:07,344:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:52:07,347:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:52:49,654:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:52:49,659:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:52:49,661:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:52:49,664:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:52:49,667:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:52:49,670:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:53:11,763:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 21:53:11,767:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 21:53:11,771:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 21:53:11,773:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 21:53:11,777:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:53:11,779:INFO:2351436263:Tokenizer retrieved from file
+[2024-09-25 21:53:11,788:INFO:449058478:The  max length of source sentence is 14
+[2024-09-25 21:53:11,790:INFO:449058478:The  max length of target sentence is 11
+[2024-09-25 22:12:52,913:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-25 22:13:54,099:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-25 22:13:57,260:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 22:13:57,263:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:13:57,264:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:13:57,265:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:13:57,265:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 22:13:58,546:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6DC7:367786:556C02:6AC4E2:66F43A49
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 16:28:58 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21727-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727281738.101652,VS0,VE332
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5db67241054406214a049aee9de35cfb08bd31dd
+Expires: Wed, 25 Sep 2024 16:33:58 GMT
+Source-Age: 0
+
+
+[2024-09-25 22:13:58,547:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-25 22:13:58,552:INFO:dataingestion:Extraction completed successfully
+[2024-09-25 22:13:58,553:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-25 22:13:58,553:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-25 22:13:58,557:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:13:58,560:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:13:58,560:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:13:58,561:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-25 22:13:58,562:INFO:main:<><><> stage DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-25 22:13:58,563:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-25 22:13:58,566:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:13:58,568:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:13:58,568:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:13:58,569:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 22:13:58,570:ERROR:main:name 'Path' is not defined
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 31, in <module>
+    data_transformation.main()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_03_datatransformation.py", line 15, in main
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_03_datatransformation.py", line 13, in main
+    get_dataset.get_ds()
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/datatransform.py", line 133, in get_ds
+    tokenizer_src=self.data_transformer.build_tokenizer(ds_raw,self.config.src_lang)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/datatransform.py", line 22, in build_tokenizer
+    tokenizer_path=Path(str(self.config.tokenizer_file).format(lang))
+                   ^^^^
+NameError: name 'Path' is not defined
+[2024-09-25 22:14:34,810:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-25 22:14:37,872:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-25 22:14:37,875:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:14:37,876:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:14:37,877:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:14:37,877:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-25 22:14:38,257:INFO:dataingestion:artifacts/data_ingestion/data.zip downloaded with the following Connection: close
+Content-Length: 5349
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "ae983b6b1b4db56278ef2af0f64aca08a49ee1262cca45c79571c6d2e840d41f"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6DC7:367786:556C02:6AC4E2:66F43A49
+Accept-Ranges: bytes
+Date: Wed, 25 Sep 2024 16:29:38 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21723-DEL
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1727281778.248574,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fcf796f6e224d6ddd2d3a6edee4018329cc5f1ae
+Expires: Wed, 25 Sep 2024 16:34:38 GMT
+Source-Age: 40
+
+
+[2024-09-25 22:14:38,258:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-25 22:14:38,262:INFO:dataingestion:Extraction completed successfully
+[2024-09-25 22:14:38,262:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-25 22:14:38,263:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-25 22:14:38,267:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:14:38,269:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:14:38,270:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:14:38,270:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-25 22:14:38,272:INFO:main:<><><> stage DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-25 22:14:38,272:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-25 22:14:38,274:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-25 22:14:38,275:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-25 22:14:38,276:INFO:common:Directory 'artifacts' created successfully
+[2024-09-25 22:14:38,276:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-25 22:14:38,285:INFO:datatransform:Tokenizer saved
+[2024-09-25 22:14:38,291:INFO:datatransform:Tokenizer saved
+[2024-09-25 22:14:38,300:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-25 22:14:38,301:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-25 22:14:38,301:INFO:main:<><><> stage DATA TRANSFORMATION STAGE completed successfully <><><>

@@ -16,3 +16,14 @@ class DataValidationConfig:
     STATUS_FILE:str
     ALL_REQUIRED_FILES:str
     
+@dataclass(frozen=True)
+class DataTransformConfig:
+    root_dir:Path
+    data_path:Path
+    tokenizer_file:Path
+    max_seq_len:int
+    src_lang:str
+    tgt_lang:str
+    src_file:Path
+    tgt_file:Path
+    batch_size:int
