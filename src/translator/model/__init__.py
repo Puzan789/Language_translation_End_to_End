@@ -199,7 +199,7 @@ class Transformer(nn.Module):
     #applying projection with softmax
     def project(self,x):
         return self.projection_layer(x)
-def build_transformer(src_vocab_size:int,tgt_vocab_size:int,src_seq_len:int,tgt_seq_len:int,d_model:int=512,N:int=6,h:int=8,dropout:float=0.2,d_ff:int=2048) -> Transformer:
+def build_transformer(src_vocab_size:int,tgt_vocab_size:int,src_seq_len:int,tgt_seq_len:int,d_model:int=512,N:int=6,h:int=8,dropout:float=0.1,d_ff:int=2048) -> Transformer:
     # Creating Embedding Layers
     src_embed=Inputembedding(d_model,src_vocab_size)
     tgt_embed=Inputembedding(d_model,tgt_vocab_size)

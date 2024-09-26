@@ -1,6 +1,6 @@
 import torch
 from tokenizers import Tokenizer
-from translator.model import build_transformer
+from translator.model.mytranslatormodel import build_transformer # only for my trained 6hrs model
 from translator.entity import ModelTranslateConfig
 from pathlib import Path
 
@@ -17,6 +17,9 @@ class Load_model:
         model_filename=f'{model_basename}{epoch}.pt'
         return str(Path('.')/model_folder/model_filename)
     
+    #only performed this because i have to load previouslty trained model
+  
+    
     def load_model(self):
         
         self.tokenizer_src = Tokenizer.from_file(self.config.tokenizer_file.format(self.config.src_lang))
@@ -29,6 +32,7 @@ class Load_model:
         model_filename = self.get_weights_file_path(f"epoch_{self.config.epoch_name}")
         state = torch.load(model_filename, map_location=self.device)
         self.model.load_state_dict(state['model_state_dict'])
+        
         
     def preprocess_sentence(self,sentence, tokenizer, seq_len, sos_token, eos_token, pad_token):
         tokens = tokenizer.encode(sentence).ids

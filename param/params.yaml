@@ -2,7 +2,8 @@ modeltrainer:
   max_seq_len: 150
   src_lang: 'src'
   tgt_lang: 'tgt'
-  batch_size: 2
+  batch_size: 16
   d_model: 512
   learning_rate: 0.0001
-  num_epochs: 1
+  num_epochs: 25
+  

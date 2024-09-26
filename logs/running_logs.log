@@ -1395,3 +1395,675 @@ Final Average BLEU score on validation data: 0.0000
 [2024-09-26 17:10:29,200:INFO:common:Directory 'artifacts/data_translate' created successfully
 [2024-09-26 17:10:30,261:INFO:main:Translated test sentence :
 [2024-09-26 17:10:30,262:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:17:51,931:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:17:52,842:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:17:52,846:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:17:52,849:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:17:52,850:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:17:52,850:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:17:52,850:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:17:52,851:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:17:52,854:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:17:52,854:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:17:52,854:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:17:52,856:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:17:52,857:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:17:52,857:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:17:52,858:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:17:52,859:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:17:52,859:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:17:52,861:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:17:52,862:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:17:52,863:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:17:52,863:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:17:52,875:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:17:52,876:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:17:52,897:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:17:52,897:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:17:52,898:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:17:52,899:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:17:52,904:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:17:52,906:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:17:52,906:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:17:52,907:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:17:52,924:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:17:52,927:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:17:52,928:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:17:52,929:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:17:52,929:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:17:52,930:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:17:52,931:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:17:52,934:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:17:52,934:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:18:06,852:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:18:06,852:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:18:07,094:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:18:07,098:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:18:07,099:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:18:07,102:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:07,103:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:07,104:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:07,104:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:18:07,632:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_training/weights/tmodel_epoch_latest.pt'
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 30, in load_model
+    state = torch.load(model_filename, map_location=self.device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/serialization.py", line 1065, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/serialization.py", line 468, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/serialization.py", line 449, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_training/weights/tmodel_epoch_latest.pt'
+[2024-09-26 17:18:49,596:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:18:50,433:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:18:50,439:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:50,442:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:50,442:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:50,442:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:18:50,443:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:18:50,443:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:18:50,447:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:18:50,447:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:18:50,447:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:18:50,449:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:50,451:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:50,451:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:50,451:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:18:50,453:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:18:50,453:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:18:50,455:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:50,457:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:50,457:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:50,458:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:18:50,459:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:18:50,460:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:18:50,468:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:18:50,468:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:18:50,468:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:18:50,469:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:18:50,471:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:50,472:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:50,472:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:50,473:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:18:50,481:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:18:50,484:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:18:50,485:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:18:50,485:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:18:50,486:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:18:50,487:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:18:50,489:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:18:50,491:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:18:50,492:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:19:03,925:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:19:03,926:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:19:04,172:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:19:04,176:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:19:04,177:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:19:04,179:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:19:04,180:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:19:04,180:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:19:04,181:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:19:05,779:INFO:main:Translated test sentence :फेरि एफएममा
+[2024-09-26 17:19:05,780:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:20:52,050:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:20:52,805:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:20:52,811:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:20:52,813:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:20:52,814:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:20:52,814:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:20:52,814:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:20:52,815:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:20:52,817:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:20:52,818:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:20:52,818:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:20:52,820:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:20:52,821:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:20:52,821:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:20:52,821:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:20:52,822:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:20:52,822:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:20:52,824:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:20:52,826:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:20:52,826:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:20:52,826:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:20:52,828:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:20:52,829:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:20:52,835:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:20:52,836:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:20:52,836:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:20:52,837:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:20:52,839:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:20:52,840:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:20:52,840:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:20:52,841:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:20:52,850:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:20:52,853:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:20:52,854:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:20:52,855:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:20:52,855:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:20:52,856:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:20:52,856:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:20:52,859:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:20:52,859:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:21:06,218:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:21:06,218:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:21:06,378:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:21:06,381:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:21:06,381:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:21:06,384:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:21:06,385:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:21:06,385:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:21:06,385:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:21:08,018:INFO:main:Translated test sentence :अनि वर्षांैदेखि धाइरहेको
+[2024-09-26 17:21:08,019:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:23:50,888:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:23:51,591:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:23:51,593:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:23:51,594:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:23:51,595:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:23:51,595:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:23:51,595:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:23:51,596:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:23:51,598:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:23:51,598:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:23:51,599:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:23:51,601:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:23:51,603:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:23:51,603:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:23:51,603:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:23:51,605:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:23:51,605:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:23:51,610:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:23:51,612:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:23:51,613:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:23:51,614:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:23:51,616:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:23:51,617:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:23:51,625:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:23:51,625:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:23:51,626:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:23:51,626:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:23:51,628:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:23:51,629:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:23:51,629:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:23:51,630:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:23:51,640:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:23:51,642:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:23:51,643:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:23:51,643:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:23:51,644:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:23:51,645:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:23:51,645:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:23:51,648:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:23:51,649:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:24:04,854:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:24:04,854:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:24:05,009:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:24:05,012:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:24:05,012:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:24:05,015:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:24:05,016:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:24:05,016:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:24:05,016:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:24:07,238:ERROR:main:Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 31, in load_model
+    self.model.load_state_dict(state['model_state_dict'])
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+[2024-09-26 17:27:09,130:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:27:09,977:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:27:09,980:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:09,981:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:09,981:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:09,981:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:27:09,982:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:27:09,982:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:27:09,986:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:27:09,986:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:27:09,986:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:27:09,989:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:09,990:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:09,991:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:09,991:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:27:09,992:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:27:09,992:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:27:09,995:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:09,997:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:09,997:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:09,997:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:27:10,000:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:27:10,001:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:27:10,007:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:27:10,008:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:27:10,008:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:27:10,008:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:27:10,011:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:10,012:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:10,013:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:10,013:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:27:10,023:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:27:10,025:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:10,026:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:10,027:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:10,027:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:27:10,029:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:27:10,031:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:27:10,034:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:27:10,034:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:27:23,486:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:27:23,486:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:27:23,655:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:27:23,658:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:27:23,659:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:27:23,662:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:27:23,663:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:27:23,664:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:27:23,664:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:27:27,331:INFO:main:Translated test sentence :चाँडै वटा अज्जेर १८लाई चलिरहेको समलिङ्गीहरूमा चाँडै अज्जेर अज्जेर अनि गर्छु चाँहि एफएममा निरन्तरतामै खाली राजीनामा खाली अज्जेर ल्याउँछन् अज्जेर अज्जेर ल्याउँछन् दलको खाली पृथ्वीनारायणले खाली चाँडै राजीनामा खाली असोजमा डिजाइनको चाँडै बल असोजमा खाली अज्जेर राजीनामा खाली अज्जेर खाली अज्जेर दिएका चाँडै राजीनामा दिएका दिएका अज्जेर चाँडै अज्जेर ल्याउँछन् संसारलाई खाली संसारलाई खेल्ने खाली चाँडै अज्जेर ल्याउँछन् राजीनामा हुर्काउनु चाँडै छु मारामार १८लाई चाँहि चाँहि चाँहि चाँहि चाँहि केले प्रतियोगितामा हुर्काउनु असोजमा अज्जेर चाँहि चाँहि चाँहि वटा असोजमा राजीनामा अज्जेर चाँहि प्रतियोगितामा हुर्काउनु अज्जेर ल्याउँछन् अज्जेर अज्जेर राजीनामा चाँडै खाली अज्जेर ल्याउँछन् राजीनामा ल्याउँछन् संसारलाई राजीनामा हुर्काउनु चाँडै अज्जेर धाइरहेको अज्जेर राजीनामा चलिरहेको हुर्काउनु असोजमा अज्जेर राजीनामा अनि हुर्काउनु हुर्काउनु सम्पन्नतामा चाँहि निरन्तरतामै छु अज्जेर राजीनामा सन्तानलाई चाँहि चलिरहेको चाँहि एफएममा हुर्काउनु असोजमा खाली अज्जेर समलिङ्गीहरूमा अज्जेर राजीनामा असोजमा अज्जेर संसारलाई खाली चाँहि वटा पाइला चाँहि एफएममा राजीनामा केले दलको प्रतियोगितामा गर्नु हुर्काउनु असोजमा असोजमा साँझ् हुर्काउनु समलिङ्गीहरूमा चाँडै
+[2024-09-26 17:27:27,331:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:39:10,533:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:39:11,458:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:39:11,462:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:39:11,463:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:39:11,463:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:39:11,464:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:39:11,464:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:39:11,464:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:39:11,467:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:39:11,467:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:39:11,467:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:39:11,469:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:39:11,471:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:39:11,471:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:39:11,471:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:39:11,472:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:39:11,472:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:39:11,475:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:39:11,476:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:39:11,476:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:39:11,476:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:39:11,478:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:39:11,479:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:39:11,485:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:39:11,486:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:39:11,486:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:39:11,487:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:39:11,489:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:39:11,490:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:39:11,491:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:39:11,491:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:39:11,499:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:39:11,503:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:39:11,504:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:39:11,505:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:39:11,505:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:39:11,507:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:39:11,508:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:39:11,510:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:39:11,510:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:39:24,013:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:39:33,128:INFO:modeltrain:Saved model for epoch 2: artifacts/data_training/weights/tmodel_epoch_2.pt
+[2024-09-26 17:39:33,177:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:39:42,371:INFO:modeltrain:Saved model for epoch 3: artifacts/data_training/weights/tmodel_epoch_3.pt
+[2024-09-26 17:39:42,400:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_2.pt
+[2024-09-26 17:39:51,840:INFO:modeltrain:Saved model for epoch 4: artifacts/data_training/weights/tmodel_epoch_4.pt
+[2024-09-26 17:39:51,883:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_3.pt
+[2024-09-26 17:40:00,982:INFO:modeltrain:Saved model for epoch 5: artifacts/data_training/weights/tmodel_epoch_5.pt
+[2024-09-26 17:40:01,015:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_4.pt
+[2024-09-26 17:40:10,465:INFO:modeltrain:Saved model for epoch 6: artifacts/data_training/weights/tmodel_epoch_6.pt
+[2024-09-26 17:40:10,496:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_5.pt
+[2024-09-26 17:40:19,983:INFO:modeltrain:Saved model for epoch 7: artifacts/data_training/weights/tmodel_epoch_7.pt
+[2024-09-26 17:40:20,038:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_6.pt
+[2024-09-26 17:40:29,499:INFO:modeltrain:Saved model for epoch 8: artifacts/data_training/weights/tmodel_epoch_8.pt
+[2024-09-26 17:40:29,503:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_7.pt
+[2024-09-26 17:40:38,875:INFO:modeltrain:Saved model for epoch 9: artifacts/data_training/weights/tmodel_epoch_9.pt
+[2024-09-26 17:40:38,876:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_8.pt
+[2024-09-26 17:40:48,294:INFO:modeltrain:Saved model for epoch 10: artifacts/data_training/weights/tmodel_epoch_10.pt
+[2024-09-26 17:40:48,370:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_9.pt
+[2024-09-26 17:40:57,743:INFO:modeltrain:Saved model for epoch 11: artifacts/data_training/weights/tmodel_epoch_11.pt
+[2024-09-26 17:40:57,796:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_10.pt
+[2024-09-26 17:41:07,456:INFO:modeltrain:Saved model for epoch 12: artifacts/data_training/weights/tmodel_epoch_12.pt
+[2024-09-26 17:41:07,486:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_11.pt
+[2024-09-26 17:41:16,980:INFO:modeltrain:Saved model for epoch 13: artifacts/data_training/weights/tmodel_epoch_13.pt
+[2024-09-26 17:41:17,010:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_12.pt
+[2024-09-26 17:41:26,450:INFO:modeltrain:Saved model for epoch 14: artifacts/data_training/weights/tmodel_epoch_14.pt
+[2024-09-26 17:41:26,486:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_13.pt
+[2024-09-26 17:41:35,881:INFO:modeltrain:Saved model for epoch 15: artifacts/data_training/weights/tmodel_epoch_15.pt
+[2024-09-26 17:41:35,922:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_14.pt
+[2024-09-26 17:41:45,341:INFO:modeltrain:Saved model for epoch 16: artifacts/data_training/weights/tmodel_epoch_16.pt
+[2024-09-26 17:41:45,373:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_15.pt
+[2024-09-26 17:41:55,109:INFO:modeltrain:Saved model for epoch 17: artifacts/data_training/weights/tmodel_epoch_17.pt
+[2024-09-26 17:41:55,137:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_16.pt
+[2024-09-26 17:42:04,482:INFO:modeltrain:Saved model for epoch 18: artifacts/data_training/weights/tmodel_epoch_18.pt
+[2024-09-26 17:42:04,533:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_17.pt
+[2024-09-26 17:42:14,049:INFO:modeltrain:Saved model for epoch 19: artifacts/data_training/weights/tmodel_epoch_19.pt
+[2024-09-26 17:42:14,097:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_18.pt
+[2024-09-26 17:42:24,385:INFO:modeltrain:Saved model for epoch 20: artifacts/data_training/weights/tmodel_epoch_20.pt
+[2024-09-26 17:42:24,415:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_19.pt
+[2024-09-26 17:42:34,004:INFO:modeltrain:Saved model for epoch 21: artifacts/data_training/weights/tmodel_epoch_21.pt
+[2024-09-26 17:42:34,096:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_20.pt
+[2024-09-26 17:42:43,899:INFO:modeltrain:Saved model for epoch 22: artifacts/data_training/weights/tmodel_epoch_22.pt
+[2024-09-26 17:42:43,932:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_21.pt
+[2024-09-26 17:42:53,632:INFO:modeltrain:Saved model for epoch 23: artifacts/data_training/weights/tmodel_epoch_23.pt
+[2024-09-26 17:42:53,734:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_22.pt
+[2024-09-26 17:43:03,139:INFO:modeltrain:Saved model for epoch 24: artifacts/data_training/weights/tmodel_epoch_24.pt
+[2024-09-26 17:43:03,178:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_23.pt
+[2024-09-26 17:43:12,956:INFO:modeltrain:Saved model for epoch 25: artifacts/data_training/weights/tmodel_epoch_25.pt
+[2024-09-26 17:43:13,008:INFO:modeltrain:Deleted previous model: artifacts/data_training/weights/tmodel_epoch_24.pt
+[2024-09-26 17:43:13,008:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:43:13,699:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:43:13,707:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:43:13,708:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:43:13,710:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:43:13,715:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:43:13,716:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:43:13,716:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:43:17,938:INFO:main:Translated test sentence :गर्नुभयो कक्षको गर्नुभयो गर्छन् कक्षको कक्षको कक्षको कक्षको कक्षको लस्सादार खेलमा कक्षको लस्सादार अर्को शून्यताबाट कक्षको वास्तविकता शून्यताबाट शून्यताबाट बन्दै शून्यताबाट कक्षको किनकि शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट षडानन्द शून्यताबाट बन्दै माता शून्यताबाट षडानन्द शून्यताबाट बन्दै मसला गरें शून्यताबाट कुरा खेलमा शून्यताबाट शून्यताबाट बन्दै पत्रिकाको मसला शून्यताबाट बन्दै मसला शून्यताबाट वातावरण शून्यताबाट बन्दै मसला शून्यताबाट बन्दै मसला शून्यताबाट कुरा कक्षको पत्रिकाको शून्यताबाट गरे शून्यताबाट कक्षको खेलमा शून्यताबाट शून्यताबाट सृजनात्मक शून्यताबाट बन्दै शून्यताबाट कुरा शून्यताबाट पत्रिकाको शून्यताबाट शून्यताबाट शून्यताबाट गरे शून्यताबाट शून्यताबाट शून्यताबाट गरे शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट गरे शून्यताबाट शून्यताबाट कक्षको दलको शून्यताबाट शून्यताबाट बन्दै मसला शून्यताबाट पत्रिकाको शून्यताबाट कुरा शून्यताबाट शून्यताबाट ? शून्यताबाट पत्रिकाको शून्यताबाट कुरा शून्यताबाट पत्रिकाको शून्यताबाट शून्यताबाट पत्रिकाको शून्यताबाट शून्यताबाट बन्दै कक्षको शून्यताबाट शून्यताबाट गरे शून्यताबाट शून्यताबाट खेलमा शून्यताबाट शून्यताबाट मान्छे शून्यताबाट गरे शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट बन्दै शून्यताबाट शून्यताबाट शून्यताबाट शून्यताबाट गरे गर्नुभयो गर्छन् शून्यताबाट शून्यताबाट गरे शून्यताबाट खेलमा शून्यताबाट बन्दै गर्छन् शून्यताबाट
+[2024-09-26 17:43:17,939:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:44:32,081:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:44:32,978:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:44:32,981:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:44:32,982:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:44:32,982:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:44:32,983:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:44:32,983:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:44:32,983:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:44:32,986:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:44:32,986:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:44:32,986:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:44:32,988:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:44:32,989:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:44:32,989:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:44:32,989:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:44:32,990:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:44:32,990:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:44:32,993:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:44:32,994:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:44:32,995:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:44:32,995:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:44:32,996:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:44:32,997:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:44:33,008:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:44:33,008:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:44:33,009:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:44:33,010:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:44:33,014:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:44:33,015:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:44:33,015:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:44:33,016:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:44:34,974:ERROR:main:Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 31, in load_model
+    self.model.load_state_dict(state['model_state_dict'])
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+[2024-09-26 18:00:04,995:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 18:00:05,844:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 18:00:05,846:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:00:05,847:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:00:05,848:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:00:05,848:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 18:00:05,849:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 18:00:05,849:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 18:00:05,852:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 18:00:05,852:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 18:00:05,853:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 18:00:05,855:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:00:05,857:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:00:05,857:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:00:05,858:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 18:00:05,859:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 18:00:05,859:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:00:05,863:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:00:05,865:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:00:05,865:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:00:05,865:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 18:00:05,867:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:00:05,868:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:00:05,878:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 18:00:05,879:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 18:00:05,879:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:00:05,879:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:00:05,881:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:00:05,882:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:00:05,883:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:00:05,883:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 18:00:08,559:ERROR:main:Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+	size mismatch for src_embedding.embedding.weight: copying a param with shape torch.Size([11705, 512]) from checkpoint, the shape in current model is torch.Size([442, 512]).
+	size mismatch for tgt_embedding.embedding.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 65, in load_model
+    self.model.load_state_dict(renamed_state_dict)
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+	size mismatch for src_embedding.embedding.weight: copying a param with shape torch.Size([11705, 512]) from checkpoint, the shape in current model is torch.Size([442, 512]).
+	size mismatch for tgt_embedding.embedding.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+[2024-09-26 18:06:46,740:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 18:06:47,628:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 18:06:47,632:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:06:47,633:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:06:47,633:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:06:47,634:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 18:06:47,634:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 18:06:47,634:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 18:06:47,636:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 18:06:47,637:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 18:06:47,637:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 18:06:47,639:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:06:47,640:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:06:47,640:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:06:47,641:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 18:06:47,641:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 18:06:47,642:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:06:47,644:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:06:47,645:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:06:47,645:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:06:47,645:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 18:06:47,647:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:06:47,648:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:06:47,654:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 18:06:47,654:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 18:06:47,655:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:06:47,656:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:06:47,658:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:06:47,659:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:06:47,660:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:06:47,660:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 18:06:50,448:ERROR:main:Error(s) in loading state_dict for Transformer:
+	size mismatch for src_embed.embedding.weight: copying a param with shape torch.Size([11705, 512]) from checkpoint, the shape in current model is torch.Size([442, 512]).
+	size mismatch for tgt_embed.embedding.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+	size mismatch for projection_layer.proj.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+	size mismatch for projection_layer.proj.bias: copying a param with shape torch.Size([19801]) from checkpoint, the shape in current model is torch.Size([474]).
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 34, in load_model
+    self.model.load_state_dict(state['model_state_dict'])
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Transformer:
+	size mismatch for src_embed.embedding.weight: copying a param with shape torch.Size([11705, 512]) from checkpoint, the shape in current model is torch.Size([442, 512]).
+	size mismatch for tgt_embed.embedding.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+	size mismatch for projection_layer.proj.weight: copying a param with shape torch.Size([19801, 512]) from checkpoint, the shape in current model is torch.Size([474, 512]).
+	size mismatch for projection_layer.proj.bias: copying a param with shape torch.Size([19801]) from checkpoint, the shape in current model is torch.Size([474]).
+[2024-09-26 18:09:40,240:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 18:09:41,109:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 18:09:41,113:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:09:41,114:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:09:41,114:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:09:41,114:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 18:09:41,115:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 18:09:41,115:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 18:09:41,118:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 18:09:41,118:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 18:09:41,118:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 18:09:41,120:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:09:41,121:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:09:41,126:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:09:41,129:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 18:09:41,130:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 18:09:41,130:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:09:41,134:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:09:41,145:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:09:41,147:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:09:41,148:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 18:09:41,150:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:09:41,151:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:09:41,162:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 18:09:41,162:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 18:09:41,163:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:09:41,163:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:09:41,166:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:09:41,168:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:09:41,168:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:09:41,169:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 18:09:45,592:INFO:main:Translated test sentence :हाम्रो देश छ सुन्दर नै हो
+[2024-09-26 18:09:45,592:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:10:04,333:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 18:10:05,266:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 18:10:05,269:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:05,271:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:05,271:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:05,272:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 18:10:05,272:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 18:10:05,273:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 18:10:05,275:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 18:10:05,276:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 18:10:05,276:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 18:10:05,278:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:05,279:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:05,279:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:05,279:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 18:10:05,280:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 18:10:05,280:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:10:05,283:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:05,283:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:05,284:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:05,284:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 18:10:05,286:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:10:05,287:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:10:05,298:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 18:10:05,298:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 18:10:05,299:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:10:05,299:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:10:05,302:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:05,303:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:05,303:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:05,303:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 18:10:08,343:ERROR:main:Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 52, in <module>
+    model_translate=TranslateService()
+                    ^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 13, in __init__
+    raise e
+  File "/media/puzan/NewVolume/MyFolder/src/translator/pipeline/stage_05_datatranslate.py", line 11, in __init__
+    self.mod.load_model()  # Load the model and tokenizers (happens once)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/puzan/NewVolume/MyFolder/src/translator/components/modeltranslate.py", line 34, in load_model
+    self.model.load_state_dict(state['model_state_dict'])
+  File "/media/puzan/NewVolume/MyFolder/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2215, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Transformer:
+	Missing key(s) in state_dict: "encoder.layers.0.ffn.firstlayer.weight", "encoder.layers.0.ffn.firstlayer.bias", "encoder.layers.0.ffn.secondlayer.weight", "encoder.layers.0.ffn.secondlayer.bias", "encoder.layers.1.ffn.firstlayer.weight", "encoder.layers.1.ffn.firstlayer.bias", "encoder.layers.1.ffn.secondlayer.weight", "encoder.layers.1.ffn.secondlayer.bias", "encoder.layers.2.ffn.firstlayer.weight", "encoder.layers.2.ffn.firstlayer.bias", "encoder.layers.2.ffn.secondlayer.weight", "encoder.layers.2.ffn.secondlayer.bias", "encoder.layers.3.ffn.firstlayer.weight", "encoder.layers.3.ffn.firstlayer.bias", "encoder.layers.3.ffn.secondlayer.weight", "encoder.layers.3.ffn.secondlayer.bias", "encoder.layers.4.ffn.firstlayer.weight", "encoder.layers.4.ffn.firstlayer.bias", "encoder.layers.4.ffn.secondlayer.weight", "encoder.layers.4.ffn.secondlayer.bias", "encoder.layers.5.ffn.firstlayer.weight", "encoder.layers.5.ffn.firstlayer.bias", "encoder.layers.5.ffn.secondlayer.weight", "encoder.layers.5.ffn.secondlayer.bias", "decoder.layers.0.ffn.firstlayer.weight", "decoder.layers.0.ffn.firstlayer.bias", "decoder.layers.0.ffn.secondlayer.weight", "decoder.layers.0.ffn.secondlayer.bias", "decoder.layers.0.residual_connection.0.norm.alpha", "decoder.layers.0.residual_connection.0.norm.bias", "decoder.layers.0.residual_connection.1.norm.alpha", "decoder.layers.0.residual_connection.1.norm.bias", "decoder.layers.0.residual_connection.2.norm.alpha", "decoder.layers.0.residual_connection.2.norm.bias", "decoder.layers.1.ffn.firstlayer.weight", "decoder.layers.1.ffn.firstlayer.bias", "decoder.layers.1.ffn.secondlayer.weight", "decoder.layers.1.ffn.secondlayer.bias", "decoder.layers.1.residual_connection.0.norm.alpha", "decoder.layers.1.residual_connection.0.norm.bias", "decoder.layers.1.residual_connection.1.norm.alpha", "decoder.layers.1.residual_connection.1.norm.bias", "decoder.layers.1.residual_connection.2.norm.alpha", "decoder.layers.1.residual_connection.2.norm.bias", "decoder.layers.2.ffn.firstlayer.weight", "decoder.layers.2.ffn.firstlayer.bias", "decoder.layers.2.ffn.secondlayer.weight", "decoder.layers.2.ffn.secondlayer.bias", "decoder.layers.2.residual_connection.0.norm.alpha", "decoder.layers.2.residual_connection.0.norm.bias", "decoder.layers.2.residual_connection.1.norm.alpha", "decoder.layers.2.residual_connection.1.norm.bias", "decoder.layers.2.residual_connection.2.norm.alpha", "decoder.layers.2.residual_connection.2.norm.bias", "decoder.layers.3.ffn.firstlayer.weight", "decoder.layers.3.ffn.firstlayer.bias", "decoder.layers.3.ffn.secondlayer.weight", "decoder.layers.3.ffn.secondlayer.bias", "decoder.layers.3.residual_connection.0.norm.alpha", "decoder.layers.3.residual_connection.0.norm.bias", "decoder.layers.3.residual_connection.1.norm.alpha", "decoder.layers.3.residual_connection.1.norm.bias", "decoder.layers.3.residual_connection.2.norm.alpha", "decoder.layers.3.residual_connection.2.norm.bias", "decoder.layers.4.ffn.firstlayer.weight", "decoder.layers.4.ffn.firstlayer.bias", "decoder.layers.4.ffn.secondlayer.weight", "decoder.layers.4.ffn.secondlayer.bias", "decoder.layers.4.residual_connection.0.norm.alpha", "decoder.layers.4.residual_connection.0.norm.bias", "decoder.layers.4.residual_connection.1.norm.alpha", "decoder.layers.4.residual_connection.1.norm.bias", "decoder.layers.4.residual_connection.2.norm.alpha", "decoder.layers.4.residual_connection.2.norm.bias", "decoder.layers.5.ffn.firstlayer.weight", "decoder.layers.5.ffn.firstlayer.bias", "decoder.layers.5.ffn.secondlayer.weight", "decoder.layers.5.ffn.secondlayer.bias", "decoder.layers.5.residual_connection.0.norm.alpha", "decoder.layers.5.residual_connection.0.norm.bias", "decoder.layers.5.residual_connection.1.norm.alpha", "decoder.layers.5.residual_connection.1.norm.bias", "decoder.layers.5.residual_connection.2.norm.alpha", "decoder.layers.5.residual_connection.2.norm.bias", "src_embedding.embedding.weight", "tgt_embedding.embedding.weight", "src_position.pe", "tgt_position.pe", "projection_layer.projection.weight", "projection_layer.projection.bias". 
+	Unexpected key(s) in state_dict: "src_embed.embedding.weight", "tgt_embed.embedding.weight", "src_pos.pe", "tgt_pos.pe", "encoder.layers.0.feed_forward_block.linear_1.weight", "encoder.layers.0.feed_forward_block.linear_1.bias", "encoder.layers.0.feed_forward_block.linear_2.weight", "encoder.layers.0.feed_forward_block.linear_2.bias", "encoder.layers.1.feed_forward_block.linear_1.weight", "encoder.layers.1.feed_forward_block.linear_1.bias", "encoder.layers.1.feed_forward_block.linear_2.weight", "encoder.layers.1.feed_forward_block.linear_2.bias", "encoder.layers.2.feed_forward_block.linear_1.weight", "encoder.layers.2.feed_forward_block.linear_1.bias", "encoder.layers.2.feed_forward_block.linear_2.weight", "encoder.layers.2.feed_forward_block.linear_2.bias", "encoder.layers.3.feed_forward_block.linear_1.weight", "encoder.layers.3.feed_forward_block.linear_1.bias", "encoder.layers.3.feed_forward_block.linear_2.weight", "encoder.layers.3.feed_forward_block.linear_2.bias", "encoder.layers.4.feed_forward_block.linear_1.weight", "encoder.layers.4.feed_forward_block.linear_1.bias", "encoder.layers.4.feed_forward_block.linear_2.weight", "encoder.layers.4.feed_forward_block.linear_2.bias", "encoder.layers.5.feed_forward_block.linear_1.weight", "encoder.layers.5.feed_forward_block.linear_1.bias", "encoder.layers.5.feed_forward_block.linear_2.weight", "encoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.0.feed_forward_block.linear_1.weight", "decoder.layers.0.feed_forward_block.linear_1.bias", "decoder.layers.0.feed_forward_block.linear_2.weight", "decoder.layers.0.feed_forward_block.linear_2.bias", "decoder.layers.0.residual_connections.0.norm.alpha", "decoder.layers.0.residual_connections.0.norm.bias", "decoder.layers.0.residual_connections.1.norm.alpha", "decoder.layers.0.residual_connections.1.norm.bias", "decoder.layers.0.residual_connections.2.norm.alpha", "decoder.layers.0.residual_connections.2.norm.bias", "decoder.layers.1.feed_forward_block.linear_1.weight", "decoder.layers.1.feed_forward_block.linear_1.bias", "decoder.layers.1.feed_forward_block.linear_2.weight", "decoder.layers.1.feed_forward_block.linear_2.bias", "decoder.layers.1.residual_connections.0.norm.alpha", "decoder.layers.1.residual_connections.0.norm.bias", "decoder.layers.1.residual_connections.1.norm.alpha", "decoder.layers.1.residual_connections.1.norm.bias", "decoder.layers.1.residual_connections.2.norm.alpha", "decoder.layers.1.residual_connections.2.norm.bias", "decoder.layers.2.feed_forward_block.linear_1.weight", "decoder.layers.2.feed_forward_block.linear_1.bias", "decoder.layers.2.feed_forward_block.linear_2.weight", "decoder.layers.2.feed_forward_block.linear_2.bias", "decoder.layers.2.residual_connections.0.norm.alpha", "decoder.layers.2.residual_connections.0.norm.bias", "decoder.layers.2.residual_connections.1.norm.alpha", "decoder.layers.2.residual_connections.1.norm.bias", "decoder.layers.2.residual_connections.2.norm.alpha", "decoder.layers.2.residual_connections.2.norm.bias", "decoder.layers.3.feed_forward_block.linear_1.weight", "decoder.layers.3.feed_forward_block.linear_1.bias", "decoder.layers.3.feed_forward_block.linear_2.weight", "decoder.layers.3.feed_forward_block.linear_2.bias", "decoder.layers.3.residual_connections.0.norm.alpha", "decoder.layers.3.residual_connections.0.norm.bias", "decoder.layers.3.residual_connections.1.norm.alpha", "decoder.layers.3.residual_connections.1.norm.bias", "decoder.layers.3.residual_connections.2.norm.alpha", "decoder.layers.3.residual_connections.2.norm.bias", "decoder.layers.4.feed_forward_block.linear_1.weight", "decoder.layers.4.feed_forward_block.linear_1.bias", "decoder.layers.4.feed_forward_block.linear_2.weight", "decoder.layers.4.feed_forward_block.linear_2.bias", "decoder.layers.4.residual_connections.0.norm.alpha", "decoder.layers.4.residual_connections.0.norm.bias", "decoder.layers.4.residual_connections.1.norm.alpha", "decoder.layers.4.residual_connections.1.norm.bias", "decoder.layers.4.residual_connections.2.norm.alpha", "decoder.layers.4.residual_connections.2.norm.bias", "decoder.layers.5.feed_forward_block.linear_1.weight", "decoder.layers.5.feed_forward_block.linear_1.bias", "decoder.layers.5.feed_forward_block.linear_2.weight", "decoder.layers.5.feed_forward_block.linear_2.bias", "decoder.layers.5.residual_connections.0.norm.alpha", "decoder.layers.5.residual_connections.0.norm.bias", "decoder.layers.5.residual_connections.1.norm.alpha", "decoder.layers.5.residual_connections.1.norm.bias", "decoder.layers.5.residual_connections.2.norm.alpha", "decoder.layers.5.residual_connections.2.norm.bias", "projection_layer.proj.weight", "projection_layer.proj.bias". 
+[2024-09-26 18:10:18,547:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 18:10:19,227:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 18:10:19,229:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:19,230:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:19,230:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:19,231:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 18:10:19,231:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 18:10:19,231:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 18:10:19,233:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 18:10:19,234:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 18:10:19,234:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 18:10:19,236:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:19,237:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:19,238:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:19,238:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 18:10:19,239:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 18:10:19,239:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:10:19,241:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:19,242:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:19,242:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:19,242:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 18:10:19,243:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:10:19,245:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 18:10:19,252:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 18:10:19,253:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 18:10:19,254:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 18:10:19,254:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 18:10:19,256:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 18:10:19,257:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 18:10:19,257:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 18:10:19,258:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 18:10:22,519:INFO:main:Translated test sentence :हाम्रो देश नै हो
+[2024-09-26 18:10:22,520:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>

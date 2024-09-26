@@ -49,6 +49,6 @@ class ModelTranslateConfig:
     max_seq_len:int
     model_path:Path
     model_basename:Path
-    epoch_name: int
+    epoch_name: str
 
 
