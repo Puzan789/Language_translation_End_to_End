@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from translator.entity import DataIngestionConfig,DataValidationConfig,DataTransformConfig,ModelTrainingConfig
+from translator.entity import DataIngestionConfig,DataValidationConfig,DataTransformConfig,ModelTrainingConfig,ModelTranslateConfig
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from translator.utils.common import read_yaml,create_directories,get_size
 from translator.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
@@ -69,3 +69,20 @@ class ConfigurationManager:
 
         )
         return model_training_config
+    def get_model_translate_config(self)-> ModelTranslateConfig:
+        config=self.config.data_translate
+        params=self.params.modeltrainer
+        print(len(params))
+        create_directories([config.root_dir])
+        model_translate_config=ModelTranslateConfig(
+            root_dir=config.root_dir,
+            tokenizer_file=config.tokenizer_file,
+            src_lang=params.src_lang,
+            tgt_lang=params.tgt_lang,
+            max_seq_len=params.max_seq_len,
+            model_path=config.model_path,
+            model_basename=config.model_basename,
+            epoch_name=config.epoch_name
+
+        )
+        return model_translate_config

@@ -40,5 +40,15 @@ class ModelTrainingConfig:
     num_epochs:int
     preload:bool | str
 
+@dataclass(frozen=True)
+class ModelTranslateConfig:
+    root_dir:Path
+    tokenizer_file:Path
+    src_lang:str
+    tgt_lang:Path
+    max_seq_len:int
+    model_path:Path
+    model_basename:Path
+    epoch_name: int
 
 

@@ -5,3 +5,4 @@ ensure
 -e .
 tensorboard
 nltk
+fastapi[standard]

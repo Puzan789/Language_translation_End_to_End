@@ -1202,3 +1202,196 @@ Traceback (most recent call last):
     return (attention_scores@value) ,attention_scores
             ~~~~~~~~~~~~~~~~^~~~~~
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 3.81 GiB of which 1.81 MiB is free. Process 16079 has 3.48 GiB memory in use. Including non-PyTorch memory, this process has 318.00 MiB memory in use. Of the allocated memory 236.80 MiB is allocated by PyTorch, and 13.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2024-09-26 15:17:59,294:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 16:06:48,643:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:06:48,652:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:06:48,655:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:06:48,658:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:07:09,957:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:07:09,961:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:07:09,963:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:07:09,965:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:07:22,870:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:07:22,875:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:07:22,877:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:07:22,879:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:09:42,218:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:09:42,224:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:09:42,228:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:09:42,231:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:44:13,350:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:44:13,354:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:44:13,357:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:44:13,358:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:45:17,699:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:45:17,703:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:45:17,705:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:45:17,707:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 16:45:52,154:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 16:45:52,157:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 16:45:52,158:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 16:45:52,159:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:08:49,057:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:08:50,136:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:08:50,142:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:08:50,147:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:08:50,148:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:08:50,148:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:08:50,149:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:08:50,149:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:08:50,153:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:08:50,154:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:08:50,154:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:08:50,158:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:08:50,160:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:08:50,160:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:08:50,161:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:08:50,162:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:08:50,162:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:08:50,165:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:08:50,168:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:08:50,168:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:08:50,169:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:08:50,172:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:08:50,174:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:08:50,195:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:08:50,195:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:08:50,196:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:08:50,196:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:08:50,200:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:08:50,202:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:08:50,203:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:08:50,203:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:08:50,223:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:08:50,227:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:08:50,229:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:08:50,229:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:08:50,230:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:08:50,232:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:08:50,233:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:08:50,238:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:08:50,238:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:09:06,145:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:09:06,146:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:09:06,314:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:09:06,317:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:09:06,317:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:09:06,320:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:06,321:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:06,321:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:06,321:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:09:07,357:ERROR:main:'TranslateService' object is not callable
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 53, in <module>
+    translation= model_translate()
+                 ^^^^^^^^^^^^^^^^^
+TypeError: 'TranslateService' object is not callable
+[2024-09-26 17:09:37,989:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:09:39,068:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:09:39,072:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:39,074:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:39,074:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:39,075:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:09:39,075:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:09:39,076:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:09:39,081:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:09:39,081:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:09:39,082:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:09:39,087:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:39,089:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:39,090:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:39,090:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:09:39,091:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:09:39,092:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:09:39,095:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:39,097:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:39,098:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:39,098:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:09:39,100:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:09:39,101:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:09:39,111:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:09:39,111:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:09:39,112:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:09:39,112:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:09:39,116:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:39,118:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:39,119:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:39,119:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:09:39,134:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:09:39,139:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:39,141:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:39,142:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:39,142:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:09:39,144:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:09:39,145:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:09:39,149:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:09:39,150:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:09:54,358:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:09:54,358:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:09:54,523:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:09:54,526:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:09:54,526:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:09:54,529:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:09:54,530:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:09:54,530:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:09:54,530:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:09:55,711:ERROR:main:name 'translation' is not defined
+Traceback (most recent call last):
+  File "/media/puzan/NewVolume/MyFolder/main.py", line 54, in <module>
+    sent=translation.translate("Our country is beautiful")
+         ^^^^^^^^^^^
+NameError: name 'translation' is not defined
+[2024-09-26 17:10:13,032:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 17:10:13,888:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 17:10:13,892:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:13,894:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:13,895:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:13,895:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 17:10:13,895:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 17:10:13,896:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 17:10:13,899:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 17:10:13,899:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 17:10:13,899:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 17:10:13,903:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:13,905:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:13,905:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:13,906:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 17:10:13,907:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 17:10:13,907:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 17:10:13,911:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:13,913:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:13,914:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:13,914:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:10:13,916:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:10:13,917:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:10:13,928:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:10:13,929:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:10:13,929:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 17:10:13,930:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:10:13,933:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:13,936:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:13,937:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:13,937:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 17:10:13,951:INFO:modeltrain:Using devicecuda
+[2024-09-26 17:10:13,955:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:13,957:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:13,957:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:13,958:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 17:10:13,959:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:10:13,960:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 17:10:13,965:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 17:10:13,965:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 17:10:29,017:INFO:modeltrain:Saved model for epoch 1: artifacts/data_training/weights/tmodel_epoch_1.pt
+[2024-09-26 17:10:29,018:INFO:modeltrain:Training complete. Calculating BLEU score on validation data...
+[2024-09-26 17:10:29,190:INFO:modeltrain:
+Final Average BLEU score on validation data: 0.0000
+[2024-09-26 17:10:29,193:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
+[2024-09-26 17:10:29,194:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 17:10:29,196:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 17:10:29,198:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 17:10:29,200:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 17:10:29,200:INFO:common:Directory 'artifacts/data_translate' created successfully
+[2024-09-26 17:10:30,261:INFO:main:Translated test sentence :
+[2024-09-26 17:10:30,262:INFO:main:<><><>  MODEL TRAINING STAGE completed successfully <><><>
