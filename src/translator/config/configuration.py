@@ -9,6 +9,7 @@ from translator.utils.common import read_yaml,create_directories,get_size
 
 class ConfigurationManager:
     def __init__(self,config_file_path=CONFIG_FILE_PATH,params_file_path=PARAMS_FILE_PATH):
+        print(os.getcwd())
         self.config=read_yaml(config_file_path)
         self.params=read_yaml(params_file_path)
         create_directories([self.config.artifacts_root])
@@ -73,9 +74,8 @@ class ConfigurationManager:
         config=self.config.data_translate
         params=self.params.modeltrainer
         print(len(params))
-        create_directories([config.root_dir])
+        
         model_translate_config=ModelTranslateConfig(
-            root_dir=config.root_dir,
             tokenizer_file=config.tokenizer_file,
             src_lang=params.src_lang,
             tgt_lang=params.tgt_lang,

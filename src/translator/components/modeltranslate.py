@@ -3,6 +3,7 @@ from tokenizers import Tokenizer
 from translator.model.mytranslatormodel import build_transformer # only for my trained 6hrs model
 from translator.entity import ModelTranslateConfig
 from pathlib import Path
+import os
 
 class Load_model:
     def __init__(self,config:ModelTranslateConfig):
@@ -30,7 +31,7 @@ class Load_model:
         self.model = self.model.to(self.device)
         
         model_filename = self.get_weights_file_path(f"epoch_{self.config.epoch_name}")
-        state = torch.load(model_filename, map_location=self.device)
+        state = torch.load(model_filename, map_location=self.device,weights_only=True)
         self.model.load_state_dict(state['model_state_dict'])
         
         

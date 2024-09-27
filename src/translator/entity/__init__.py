@@ -42,7 +42,6 @@ class ModelTrainingConfig:
 
 @dataclass(frozen=True)
 class ModelTranslateConfig:
-    root_dir:Path
     tokenizer_file:Path
     src_lang:str
     tgt_lang:Path

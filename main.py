@@ -50,7 +50,7 @@ TAGE_NAME="MODEL TRANSLATION STAGE"
 try:
     logger.info (f"<><><><>{STAGE_NAME} Started <><><><>")
     model_translate=TranslateService()
-    
+
     sent=model_translate.translate("Our country is beautiful")
     print(f"Test sentence:{sent}")
     logger.info(f"Translated test sentence :{sent}")

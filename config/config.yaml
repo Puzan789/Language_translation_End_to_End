@@ -27,8 +27,8 @@ data_training:
   model_basename: 'tmodel_'
 
 data_translate:
-  root_dir: artifacts/data_translate
-  tokenizer_file: artifacts/data_translate/tokenizer_{0}.json
-  model_path: artifacts/data_translate/weights
+ 
+  tokenizer_file: ../artifacts/data_translate/tokenizers/tokenizer_{0}.json
+  model_path: ../artifacts/data_translate/weights
   model_basename: 'tmodel_'
   epoch_name: latest

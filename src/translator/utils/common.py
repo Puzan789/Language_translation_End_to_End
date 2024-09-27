@@ -23,6 +23,7 @@ def read_yaml(path_to_yaml:Path)->ConfigBox:
     Raises:
         BoxValueError: If the YAML file is not found or does not contain valid data.
     """
+    print(os.getcwd())
     try:
         with open(path_to_yaml) as yaml_file:
             content=yaml.safe_load(yaml_file)

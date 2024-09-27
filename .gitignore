@@ -9,3 +9,8 @@ logs/
 /**/logs/*
 
 *egg-info/
+/logic.md
+/jwtoauth.md
+/logs/
+/myreadme.md
+/exreadme.md

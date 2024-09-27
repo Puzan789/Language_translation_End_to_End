@@ -2067,3 +2067,43 @@ RuntimeError: Error(s) in loading state_dict for Transformer:
 [2024-09-26 18:10:19,258:INFO:common:Directory 'artifacts/data_translate' created successfully
 [2024-09-26 18:10:22,519:INFO:main:Translated test sentence :हाम्रो देश नै हो
 [2024-09-26 18:10:22,520:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 19:00:42,358:INFO:config:PyTorch version 2.4.1 available.
+[2024-09-26 19:00:43,482:INFO:main:<><><><>DATA INGESTION STAGE Started <><><><>
+[2024-09-26 19:00:43,489:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 19:00:43,494:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 19:00:43,495:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 19:00:43,495:INFO:common:Directory 'artifacts/data_ingestion' created successfully
+[2024-09-26 19:00:43,496:INFO:dataingestion:file already exists with the size 5 KB
+[2024-09-26 19:00:43,497:INFO:dataingestion:Extracting zip file to artifacts/data_ingestion/textdata
+[2024-09-26 19:00:43,501:INFO:dataingestion:Extraction completed successfully
+[2024-09-26 19:00:43,502:INFO:main:<><><> DATA INGESTION STAGE completed successfully <><><>
+[2024-09-26 19:00:43,502:INFO:main:<><><><>DATA VALIDATION STAGE Started <><><><>
+[2024-09-26 19:00:43,506:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 19:00:43,508:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 19:00:43,509:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 19:00:43,510:INFO:common:Directory 'artifacts/data_validation' created successfully
+[2024-09-26 19:00:43,511:INFO:main:<><><>  DATA VALIDATION STAGE completed successfully <><><>
+[2024-09-26 19:00:43,511:INFO:main:<><><><>DATA TRANSFORMATION STAGE Started <><><><>
+[2024-09-26 19:00:43,514:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 19:00:43,516:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 19:00:43,517:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 19:00:43,517:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 19:00:43,529:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 19:00:43,530:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 19:00:43,564:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 19:00:43,565:INFO:datatransform:The  max length of target sentence is 11
+[2024-09-26 19:00:43,565:INFO:main:<><><>  DATA TRANSFORMATION STAGE completed successfully <><><>
+[2024-09-26 19:00:43,566:INFO:main:<><><><>MODEL TRAINING STAGE Started <><><><>
+[2024-09-26 19:00:43,569:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 19:00:43,570:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 19:00:43,571:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 19:00:43,571:INFO:common:Directory 'artifacts/data_training' created successfully
+[2024-09-26 19:00:43,620:INFO:modeltrain:Using devicecuda
+[2024-09-26 19:00:43,628:INFO:common:yaml_file:config/config.yaml loaded successfully
+[2024-09-26 19:00:43,630:INFO:common:yaml_file:param/params.yaml loaded successfully
+[2024-09-26 19:00:43,631:INFO:common:Directory 'artifacts' created successfully
+[2024-09-26 19:00:43,631:INFO:common:Directory 'artifacts/data_transformation' created successfully
+[2024-09-26 19:00:43,633:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 19:00:43,635:INFO:datatransform:Tokenizer retrieved from file
+[2024-09-26 19:00:43,640:INFO:datatransform:The  max length of source sentence is 14
+[2024-09-26 19:00:43,640:INFO:datatransform:The  max length of target sentence is 11

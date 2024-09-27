@@ -4,7 +4,7 @@ from translator.components.modeltranslate import Load_model
 class TranslateService:
     def __init__(self):
         try:
-            # Load the model once during the initialization
+            
             config = ConfigurationManager()
             data_translate_config = config.get_model_translate_config()
             self.mod = Load_model(data_translate_config)  # Create the model loader instance
@@ -14,7 +14,7 @@ class TranslateService:
         
     def translate(self, sentence):
         try:
-            # Translate the sentence using the loaded model
+            
             translated_sentence = self.mod.translate_sentence(sentence)
             return translated_sentence
         except Exception as e:
