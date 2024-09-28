@@ -8,3 +8,12 @@ class Createuserrequest(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+class ApiKeyCreate(BaseModel):
+    pass
+
+class ApiKeyResponse(BaseModel):
+    key: str
+
+    class config:
+        orm_mode=True

@@ -17,3 +17,9 @@ Base=declarative_base()
 # SessionLocal: Creates new Session objects (the workspace where you interact with the database).
 # Session: A specific instance created by SessionLocal that you use to run queries, insert data, and commit/rollback transactions.
 # Base: A base class that all your database models inherit from, representing tables in the database.
+def get_db():
+    db=SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

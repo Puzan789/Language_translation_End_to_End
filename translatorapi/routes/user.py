@@ -1,7 +1,7 @@
 from fastapi import APIRouter,status,Depends,HTTPException
-from translatorapi.models.users import Users
+from translatorapi.mymodel.models import Users
 from translatorapi.schemas.userschemas import Createuserrequest,Token
-from translatorapi.db.database import SessionLocal
+from translatorapi.db.database import SessionLocal,get_db
 from typing import Annotated
 from datetime import timedelta
 from sqlalchemy.orm import Session
@@ -15,12 +15,7 @@ router=APIRouter(
 )
 
 
-def get_db():
-    db=SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+
 
 
 db_dependency=Annotated[Session,Depends(get_db)]
@@ -40,7 +35,6 @@ async def create_user(db:db_dependency,create_userrequest:Createuserrequest):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="username already exists"
         )
-
 
 
 @router.post("/token",response_model=Token)

@@ -6,7 +6,7 @@ import logging
 import sys
 print("pathis",sys.path)
 from translatorapi.services import userservice
-from translatorapi.routes import user
+from translatorapi.routes import user,apikey
 logger = logging.getLogger('watchfiles.main')
 logger.setLevel(logging.WARNING)
 Base.metadata.create_all(bind=engine)
@@ -21,6 +21,7 @@ async def lifespan(app:FastAPI):
 
 app=FastAPI(lifespan=lifespan)
 app.include_router(user.router)
+app.include_router(apikey.router)
 
 @app.get("/translate")
 async def translate(sentence:str,current_user: dict = Depends(userservice.get_current_user)):

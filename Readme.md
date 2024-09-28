@@ -71,7 +71,7 @@
 - ✅ **End-to-End Transformer Implementation**: End-to-end transformer model implemented from scratch in a training notebook on Kaggle.
 - ✅ **Pipeline Creation for Transformer Components**: Created pipelines for each component of the transformer model (data ingestion, Validation, Transformation, Training and evaluate,Translate).
 - ✅ **User Login/Logout Functionality**: Integrated user authentication and logout functionality using FastAPI.
-- ⬜ **API Key Generation**: Logged-in users will receive an API key, which they can use to integrate with their applications.
+- ✅ **API Key Generation**: Logged-in users will receive an API key, which they can use to integrate with their applications.
 - ⬜ **UI Design**: Designed a user interface (UI) where users can authenticate, generate API keys, and use real-time language translation.
 
 
