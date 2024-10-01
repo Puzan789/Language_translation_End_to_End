@@ -1,0 +1,28 @@
+<!-- src/templates/signup.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-wrapper">
+        <h2 class="form-title">Create an Account</h2>
+        <form method="post" action="/signup" class="form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </form>
+        {% if message %}
+            <div class="error-message">{{ message }}</div>
+        {% endif %}
+        <p class="form-footer">Already have an account? <a href="/login">Login here</a>.</p>
+    </div>
+</div>
+{% endblock %}

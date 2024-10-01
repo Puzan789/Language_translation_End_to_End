@@ -1,0 +1,59 @@
+<!-- src/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="/">LangTranslator</a>
+            </div>
+            <ul class="navbar-menu">
+                {% if request.cookies.get('access_token') %}
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li>
+                    <form method="post" action="/logout">
+                        <button type="submit" class="btn btn-secondary">Logout</button>
+                    </form>
+                </li>
+                {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+                {% endif %}
+            </ul>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        
+      
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} LangTranslator. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navbarMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

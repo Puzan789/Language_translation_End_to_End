@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Welcome, {{ username }}!</h2>
+
+    <!-- Display success message if it exists -->
+    {% if request.query_params.get('message') %}
+    <p style="color: green;">{{ request.query_params.get('message') }}</p>
+    {% endif %}
+
+    <section class="translate-section">
+        <h3>Translate a Sentence</h3>
+        <form method="post" action="/translate" class="form translate-form">
+            <div class="form-group">
+                <label for="sentence">Enter a sentence to translate:</label>
+                <input type="text" id="sentence" name="sentence" placeholder="Type your sentence here..." required>
+            </div>
+            <button type="submit" class="btn btn-primary">Translate</button>
+        </form>
+    </section>
+    {% if translated_sentence %}
+    <div class="translated-card">
+        <h3>Translated Sentence:</h3>
+        <p>{{ translated_sentence }}</p>
+    </div>
+    {% endif %}
+
+    <section class="api-key-section">
+        <h3>API Key Management</h3>
+
+        {% if api_key_exists %}
+        <div class="api-key-card">
+            <label for="api_key">Your API Key:</label>
+            <div style="position: relative;">
+                <input type="password" id="api_key" value="{{ api_key }}" readonly>
+                <button type="button" onclick="toggleApiKeyVisibility()"
+                    style="position: absolute; right: 10px; top: 5px;">
+                    <span id="eye-icon">👁️</span>
+                </button>
+            </div>
+            <div class="api-key-actions">
+                <button onclick="copyApiKey()" class="btn btn-secondary">Copy API Key</button>
+                <form method="post" action="/api/apikey/create" class="inline-form">
+                    <button type="submit" class="btn btn-warning">Regenerate API Key</button>
+                </form>
+                <form method="post" action="/api/apikey/delete" class="inline-form">
+                    <button type="submit" class="btn btn-danger">Delete API Key</button>
+                </form>
+            </div>
+        </div>
+        {% else %}
+        <p>You do not have an API key.</p>
+        <form method="post" action="/api/apikey/create">
+            <button type="submit" class="btn btn-primary">Create API Key</button>
+        </form>
+        {% endif %}
+
+        <script>
+            function copyApiKey() {
+                const input = document.getElementById('api_key');
+                input.select();
+                document.execCommand('copy');
+                alert('API Key copied to clipboard!');
+            }
+
+            function toggleApiKeyVisibility() {
+                const apiKeyInput = document.getElementById('api_key');
+                const eyeIcon = document.getElementById('eye-icon');
+                if (apiKeyInput.type === "password") {
+                    apiKeyInput.type = "text";
+                    eyeIcon.textContent = "🙈"; // Change icon to indicate hiding
+                } else {
+                    apiKeyInput.type = "password";
+                    eyeIcon.textContent = "👁️"; // Change icon to indicate viewing
+                }
+            }
+        </script>
+
+        {% endblock %}
